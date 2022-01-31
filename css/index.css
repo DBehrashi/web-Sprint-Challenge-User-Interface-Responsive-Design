@@ -1,140 +1,437 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
+
 body {
-	line-height: 1;
+  line-height: 1;
+  font-size: 1.6rem;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
 }
 
-html{
-    font-size:62.5%;
+html {
+  font-size: 62.5%;
 }
+
 body {
-    font-family: 'Roboto', sans-serif;
-    line-height:1.5;
-    font-size:1.6rem;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
-h1, h2, h3, h4, h5 {
-    font-size: 2.5rem;
-    margin-bottom: 2%;
-    font-family: 'Rubik', sans-serif;
+a {
+  text-decoration: none;
+  color: black;
 }
-section, footer{
-    padding:4% 0;
-}
+
 .container {
-    width: 80%;
-    margin: 0 auto;
+  max-width: 80rem;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 1.2rem;
 }
 
-/*Top Section Styles*/
+/* Header */
 
-.top-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 4%;
-    border-bottom: 2px solid #ff4b00;
-    text-align: justify;
+.header {
+  margin-top: 1.5rem;
+  padding: 1.2rem 0;
 }
 
-.top-content .text-container {
-    width: 35%;
-    padding: 0 1%;
-    padding-bottom: 4%;  
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  gap: 3.5rem;
 }
 
-/*Middle Section Styles*/
-.middle-content {
-    margin-bottom: 4%;
+.logo {
+  width: 30%;
 }
 
-.middle-content h2 {
-    margin-bottom: 0;
+.logo > img {
+  display: block;
+  width: 225px;
+  height: 5rem;
 }
 
-.middle-content .boxes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
 }
 
-.middle-content .boxes .box {
-    background: black;
-    margin: 4% 0;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Hero Section */
+
+.headliner {
+  margin: 3.3rem 0;
 }
 
-/*Bottom Section Styles*/
+.headliner > img {
+  width: 100%;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3.5rem;
+  border-bottom: 2px solid #ff4b00;
+  padding-bottom: 2.5rem;
+}
+
+.hometext-container h2 {
+  font-size: 2.1rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/*Middle Section */
+.middle-section {
+  padding: 3.5rem 0;
+}
+
+.middle-section h2 {
+  font-size: 2.1rem;
+  margin-bottom: 2.5rem;
+}
+
+.middle-section .boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.middle-section .boxes .box {
+  width: 130px;
+  height: 120px;
+  padding: 3.5rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Boxes coloring */
+.box1 {
+  background-color: teal;
+}
+.box2 {
+  background-color: gold;
+}
+.box3 {
+  background-color: cadetblue;
+}
+.box4 {
+  background-color: coral;
+}
+.box5 {
+  background-color: crimson;
+}
+.box6 {
+  background-color: forestgreen;
+}
+.box7 {
+  background-color: darkorchid;
+}
+.box8 {
+  background-color: hotpink;
+}
+.box9 {
+  background-color: indigo;
+}
+.box10 {
+  background-color: dodgerblue;
+}
+
+/*Bottom Section*/
+
 .bottom-content {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5rem;
+  border-top: 2px solid #ff4b00;
+  padding: 3.5rem 0;
 }
 
-.bottom-content .text-container {
-    width:25%;
-}
-
-.bottom-content .text-container:last-child {
-    padding-right: 0;
+.text-container h2 {
+  font-size: 2.1rem;
+  margin-bottom: 1.5rem;
 }
 
 /*Footer Styles*/
-footer {
-    width: 100%;
-    background-color: #ff4b00;
+
+.footer {
+  max-width: 90rem;
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #ff4b00;
 }
 
-/*About Page Styles*/
+.footer-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.footer-navigation > a {
+  color: #fff;
+}
 
-/*Responsive Styles*/
+/* -------------------About Page---------------------*/
+
+/* About Section */
+.about-content {
+  border-bottom: 2px solid #ff4b00;
+}
+
+.about-content h2 {
+  font-size: 2.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-content p {
+  margin-bottom: 2.5rem;
+}
+
+/* About Card Section */
+.about-card-section {
+  padding: 3.5rem 0;
+}
+
+.about-card-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.about-card {
+  width: 35rem;
+  border-bottom: 2px solid #ff4b00;
+}
+
+.about-card-image > img {
+  display: block;
+  width: 100%;
+}
+
+.about-card-text {
+  padding: 2.5rem 0;
+}
+
+.about-card-text h2 {
+  font-size: 2.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.work-together-section {
+  margin-top: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.work-together-content h2 {
+  font-size: 2.1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 500px) {
+  .container,
+  .footer {
+    width: 100%;
+  }
+
+  .about-card-content {
+    justify-content: center;
+  }
+
+  .about-card {
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-content {
+    flex-direction: column;
+  }
+
+  .about-card-text h2,
+  .work-together-content h2,
+  .about-content h2,
+  .text-container h2 {
+    text-align: center;
+  }
+
+  .middle-section .boxes .box {
+    width: 200px;
+    height: 160px;
+  }
+
+  .bottom-content {
+    flex-direction: column;
+  }
+
+  .footer-navigation {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .footer {
+    padding: 2.5rem;
+    height: 100%;
+  }
+}
